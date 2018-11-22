@@ -8,11 +8,11 @@ client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'setg')) {
+  if (message.content.startsWith(adminprefix + 'play')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else 
-     if (message.content === (adminprefix + "play")) {
+     if (message.content === (adminprefix + "gaming")) {
     message.guild.leave();        
   } else  
   if (message.content.startsWith(adminprefix + 'watch')) {
